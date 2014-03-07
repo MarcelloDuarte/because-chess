@@ -12,5 +12,3 @@ parameters:
     mailer_password: null
     locale: en
     secret: ThisTokenIsNotSoSecretChangeIt
-
-    player_pool.file_path: %kernel.root_dir%/app/Resources/player_pool.txt
