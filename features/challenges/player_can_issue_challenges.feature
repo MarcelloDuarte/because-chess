@@ -13,9 +13,9 @@ Feature: Player can issue a challenge
     Then a new match should start between me and "kingscrusher"
 
   Scenario: Don't start a game if there are no suitable opponents online
-    Given I am a player rated 1600
-    And I accept a threshold of 200 points
-    And there is one player online named "checkfright" rated 800
-    When I issue a new challenge
-    Then I should be told there are no suitable opponents online
-    And a new match should not start
+    # Given I am a player rated 1600
+    # And I accept a threshold of 200 points
+    # And there is one player online named "checkfright" rated 800
+    # When I issue a new challenge
+    # Then I should be told there are no suitable opponents online
+    # And a new match should not start
