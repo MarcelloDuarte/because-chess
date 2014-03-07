@@ -1,3 +1,7 @@
 default:
     context:
         class: PlayerContext
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url: http://localhost/chess
+            goutte: ~
