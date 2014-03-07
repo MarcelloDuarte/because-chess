@@ -3,14 +3,14 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "950fca3706036c48c6741855ba77b395",
+    "hash": "c83e87b31357db45281d0c02048268dd",
     "packages": [
 
     ],
     "packages-dev": [
         {
             "name": "behat/behat",
-            "version": "2.5.x-dev",
+            "version": "v2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
@@ -601,6 +601,65 @@
                 "stream"
             ],
             "time": "2014-01-28 22:14:17"
+        },
+        {
+            "name": "sensiolabs/behat-page-object-extension",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/BehatPageObjectExtension.git",
+                "reference": "f49b8fe3789ba866b141baf851c5a6843326917b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/BehatPageObjectExtension/zipball/f49b8fe3789ba866b141baf851c5a6843326917b",
+                "reference": "f49b8fe3789ba866b141baf851c5a6843326917b",
+                "shasum": ""
+            },
+            "require": {
+                "behat/behat": "~2.4",
+                "behat/mink-extension": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "dev-master"
+            },
+            "suggest": {
+                "bossa/phpspec2-expect": "Allows to use PHPSpec2 matchers in Behat context files"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "SensioLabs\\Behat\\PageObjectExtension\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcello Duarte",
+                    "email": "mduarte@inviqa.com"
+                },
+                {
+                    "name": "Jakub Zalas",
+                    "email": "jzalas@sensiolabs.co.uk"
+                }
+            ],
+            "description": "Page object extension for Behat",
+            "homepage": "https://github.com/sensiolabs/BehatPageObjectExtension",
+            "keywords": [
+                "BDD",
+                "Behat",
+                "page"
+            ],
+            "time": "2013-08-13 09:40:20"
         },
         {
             "name": "symfony/browser-kit",
@@ -1245,9 +1304,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "behat/behat": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": [
 
     ],
