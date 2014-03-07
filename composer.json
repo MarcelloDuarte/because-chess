@@ -15,7 +15,8 @@
     "require-dev": {
         "sensiolabs/behat-page-object-extension": "~1.0",
         "behat/mink-goutte-driver": "~1.0",
-        "behat/symfony2-extension": "~1.1"
+        "behat/symfony2-extension": "~1.1",
+        "phpspec/phpspec": "2.0.0-RC4"
     },
     "autoload": {
         "psr-0": {
@@ -47,5 +48,8 @@
         "branch-alias": {
             "dev-master": "2.4-dev"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
