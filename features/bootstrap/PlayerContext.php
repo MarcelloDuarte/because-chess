@@ -1,9 +1,9 @@
 <?php
 
-use Behat\Behat\Context\BehatContext;
+use Behat\MinkExtension\Context\MinkContext;
 use Behat\Behat\Exception\PendingException;
 
-class PlayerContext extends BehatContext
+class PlayerContext extends MinkContext
 {
     /**
      * @Given /^I am a player rated (\d+)$/
