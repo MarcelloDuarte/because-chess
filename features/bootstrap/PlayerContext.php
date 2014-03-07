@@ -5,6 +5,8 @@ use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
 use Behat\Behat\Exception\PendingException;
 use Symfony\Component\HttpKernel\KernelInterface;
 
+use Md\Chess\Player;
+
 class PlayerContext extends PageObjectContext
     implements KernelAwareInterface
 {
