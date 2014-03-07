@@ -8,9 +8,14 @@ class PlayerContext extends MinkContext
     /**
      * @Given /^I am a player rated (\d+)$/
      */
-    public function iAmAPlayerRated($arg1)
+    public function iAmAPlayerRated($rating)
     {
-        throw new PendingException();
+        $this->getSession()->visit('http://localhost/chess');
+        $page = $this->getSession()->getPage();
+        if (!$el = $page->find('css', '#rating')) {
+            throw RuntimeException('Field player rating not found');
+        }
+        $el->setValue($rating);
     }
 
     /**
