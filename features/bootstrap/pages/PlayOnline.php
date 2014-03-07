@@ -9,8 +9,16 @@ class PlayOnline extends Page
     public function fillRating($rating)
     {
         if (!$el = $this->find('css', '#rating')) {
-            throw \RuntimeException('Field player rating not found');
+            throw new \RuntimeException('Field rating not found');
         }
         $el->setValue($rating);
+    }
+
+    public function fillThreshold($threshold)
+    {
+        if (!$el = $this->find('css', '#threshold')) {
+            throw new \RuntimeException('Field threshold not found');
+        }
+        $el->setValue($threshold);
     }
 }

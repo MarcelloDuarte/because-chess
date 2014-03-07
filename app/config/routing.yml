@@ -1,0 +1,5 @@
+md_because_chess:
+    resource: "@MdBecauseChessBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

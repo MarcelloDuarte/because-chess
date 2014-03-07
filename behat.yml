@@ -1,10 +1,11 @@
 default:
     context:
         class: PlayerContext
+    paths:
+        features: features
     extensions:
         Behat\MinkExtension\Extension:
-            base_url: http://localhost/chess
+            base_url: http://localhost/chess/web/app_dev.php
             goutte: ~
-            default_session: symfony2
         SensioLabs\Behat\PageObjectExtension\Extension: ~
         Behat\Symfony2Extension\Extension: ~
