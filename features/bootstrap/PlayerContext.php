@@ -1,21 +1,19 @@
 <?php
 
-use Behat\MinkExtension\Context\MinkContext;
+use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
 use Behat\Behat\Exception\PendingException;
 
-class PlayerContext extends MinkContext
+class PlayerContext extends PageObjectContext
 {
     /**
      * @Given /^I am a player rated (\d+)$/
      */
     public function iAmAPlayerRated($rating)
     {
-        $this->getSession()->visit('http://localhost/chess');
-        $page = $this->getSession()->getPage();
-        if (!$el = $page->find('css', '#rating')) {
-            throw RuntimeException('Field player rating not found');
-        }
-        $el->setValue($rating);
+        /* @var PlayOnlinePage $page */
+        $page = $this->getPage('Play Online');
+        $page->open();
+        $page->fillRating($rating);
     }
 
     /**
