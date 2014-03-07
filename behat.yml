@@ -5,3 +5,4 @@ default:
         Behat\MinkExtension\Extension:
             base_url: http://localhost/chess
             goutte: ~
+        SensioLabs\Behat\PageObjectExtension\Extension: ~
