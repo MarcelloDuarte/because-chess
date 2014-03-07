@@ -1,10 +1,18 @@
 <?php
 
+use Behat\Symfony2Extension\Context\KernelAwareInterface;
 use SensioLabs\Behat\PageObjectExtension\Context\PageObjectContext;
 use Behat\Behat\Exception\PendingException;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 class PlayerContext extends PageObjectContext
+    implements KernelAwareInterface
 {
+    /**
+     * @var KernelInterface
+     */
+    private $kernel;
+
     /**
      * @Given /^I am a player rated (\d+)$/
      */
@@ -27,9 +35,10 @@ class PlayerContext extends PageObjectContext
     /**
      * @Given /^there is one player online named "([^"]*)" rated (\d+)$/
      */
-    public function thereIsOnePlayerOnlineNamedRated($arg1, $arg2)
+    public function thereIsOnePlayerOnlineNamedRated($name, $rating)
     {
-        throw new PendingException();
+        $pool = $this->kernel->getContainer()->get('player_pool');
+        $pool->add(new Player($name, $rating));
     }
 
     /**
@@ -62,5 +71,15 @@ class PlayerContext extends PageObjectContext
     public function aNewMatchShouldStartBetweenMeAnd($arg1)
     {
         throw new PendingException();
+    }
+
+    /**
+     * Sets Kernel instance.
+     *
+     * @param KernelInterface $kernel HttpKernel instance
+     */
+    public function setKernel(KernelInterface $kernel)
+    {
+        $this->kernel = $kernel;
     }
 }
